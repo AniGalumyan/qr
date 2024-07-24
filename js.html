@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group Finder</title>
+</head>
+<body>
+    <h1>Your Group Information</h1>
+    <p>Based on the data from the form, you have been assigned to Group: <span id="group-number"></span></p>
+    <script>
+        function getQueryParameter(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+        document.getElementById('group-number').innerText = getQueryParameter('group');
+    </script>
+</body>
+</html>
+
